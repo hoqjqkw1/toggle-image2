@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Image</title>
+</head>
+<body>
+  <div style="text-align: center;">
+    <img id="toggleImage" 
+         src="https://drive.google.com/uc?id=1hC9duIj9yS7jXg1Obn24bqzrM7UHxMKA" 
+         alt="Initial PNG" 
+         style="cursor: pointer; max-width: 100%; height: auto;" />
+  </div>
+
+  <script>
+    const pngLink = "https://drive.google.com/uc?id=1hC9duIj9yS7jXg1Obn24bqzrM7UHxMKA";
+    const gifLink = "https://drive.google.com/uc?id=1gywQmeGIgoq337i3RaecimIidq3QxztX";
+
+    document.getElementById('toggleImage').addEventListener('click', function () {
+      const img = this;
+      img.src = gifLink; // GIF로 변경
+      setTimeout(() => {
+        img.src = pngLink; // 다시 PNG로 복구
+      }, 35000); // 35초 후
+    });
+  </script>
+</body>
+</html>
+
